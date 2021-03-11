@@ -21,12 +21,11 @@ public class ZombieComponent : MonoBehaviour
 
     private void Awake()
     {
+        
         ZombieNavMesh = GetComponent<NavMeshAgent>();
         ZombieAnimator = GetComponent<Animator>();
+        //See StateMachine script. 
         StateMachine = GetComponent<StateMachine>();
-
-
-
     }
     // Start is called before the first frame update
     void Start()
@@ -59,7 +58,7 @@ public class ZombieComponent : MonoBehaviour
         //StateMachine.Intialize(ZombieStateType.Follow);
         //StateMachine.Intialize(ZombieStateType.Attack);
         StateMachine.Intialize(ZombieStateType.Dead);
-
+        //Start as dead. as per lab
 
 
     }

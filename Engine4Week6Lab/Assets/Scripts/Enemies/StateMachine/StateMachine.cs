@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StateMachine : MonoBehaviour
 {
-
+    //Zombie State Machine. 
     public State CurrentState { get; private set; }
     protected Dictionary<ZombieStateType, State> States;
     private bool Running;
@@ -76,7 +76,7 @@ public class StateMachine : MonoBehaviour
 
     private void Update()
     {
-
+        
         if (Running)
         {
             CurrentState.Update();
